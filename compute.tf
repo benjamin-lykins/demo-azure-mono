@@ -1,29 +1,3 @@
-variable "admin_username" {
-  type    = string
-  default = "azureuser"
-}
-
-variable "location" {
-  type    = string
-  default = "eastus"
-}
-
-variable "vm_os_simple" {
-  type    = string
-  default = "UbuntuServer"
-}
-
-resource "random_id" "id" {
-  byte_length = 4
-}
-
-resource "azurerm_resource_group" "test" {
-  location = var.location
-  name     = "host${random_id.id.hex}-rg"
-}
-
-
-
 module "ubuntuservers" {
   source                           = "Azure/compute/azurerm"
   version                          = "5.3.0"
@@ -39,7 +13,7 @@ module "ubuntuservers" {
   enable_ssh_key                   = true
   ssh_key                          = "monica_id_rsa.pub"
   storage_account_type             = "Standard_LRS"
-  vm_size                          = "Standard_F2"
+  vm_size                          = "Standard_D1_v2"
   nb_data_disk                     = 1
   vm_extensions = [
     {

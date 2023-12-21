@@ -1,3 +1,4 @@
+
 module "vnet" {
   source  = "Azure/vnet/azurerm"
   version = "4.0.0"
@@ -10,3 +11,4 @@ module "vnet" {
   subnet_names        = ["subnet-compute"]
   subnet_prefixes     = ["192.168.0.0/28"]
 }
+
