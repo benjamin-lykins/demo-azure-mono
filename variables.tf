@@ -12,3 +12,8 @@ variable "vm_os_simple" {
   type    = string
   default = "UbuntuServer"
 }
+
+variable "vm_count" {
+  type    = number
+  default = 1
+}
