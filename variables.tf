@@ -17,3 +17,8 @@ variable "vm_count" {
   type    = number
   default = 1
 }
+
+variable "vm_name_prefix" {
+  type    = string
+  default = "myvm"
+}
