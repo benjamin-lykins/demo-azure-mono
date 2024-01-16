@@ -1,7 +1,7 @@
 
 module "vnet" {
   source  = "Azure/vnet/azurerm"
-  version = "4.0.0"
+  version = "4.1.0"
 
   resource_group_name = azurerm_resource_group.test.name
   use_for_each        = true
