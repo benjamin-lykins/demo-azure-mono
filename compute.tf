@@ -1,4 +1,5 @@
 module "ubuntuservers" {
+  count                            = var.vm_count
   source                           = "Azure/compute/azurerm"
   version                          = "5.3.0"
   vm_hostname                      = "${random_id.id.hex}-u"
