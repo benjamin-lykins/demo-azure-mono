@@ -24,8 +24,4 @@ provider "azurerm" {
       prevent_deletion_if_contains_resources = false
     }
   }
-  subscription_id = "16d750eb-6d45-404c-a06a-a507a663be9e"
-  client_id       = "5866b99f-adbe-4745-8792-141d5b70dccd"
-  client_secret   = "moV8Q~fj3JDcgAnH8ePBYd5VGiL3-fwkQgkBWa0Q"
-  tenant_id       = "ab2e4aa2-3855-48b9-8d02-619cee6d9513"
 }
