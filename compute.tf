@@ -2,7 +2,7 @@ module "ubuntuservers" {
   count                            = var.vm_count
   source                           = "Azure/compute/azurerm"
   version                          = "5.3.0"
-  vm_hostname                      = "${random_id.id.hex}-u"
+  vm_hostname                      = "${var.vm_name_prefix}-${count.index + 1}"
   resource_group_name              = azurerm_resource_group.test.name
   location                         = azurerm_resource_group.test.location
   admin_username                   = var.admin_username
